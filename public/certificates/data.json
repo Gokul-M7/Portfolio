@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c1.jpeg",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c2.jpeg",
+    "description": "Add details about this certification"
+  },
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c3.jpeg",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c4.jpeg",
+    "description": "Add details about this certification"
+  },
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c5.png",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c6.png",
+    "description": "Add details about this certification"
+  },
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c7.png",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c8.jpeg",
+    "description": "Add details about this certification"
+  },
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c9.jpeg",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c10.jpeg",
+    "description": "Add details about this certification"
+  },
+  {
+    "id": 1,
+    "title": "Your Certificate Title",
+    "issuer": "Issuing Organization Name",
+    "date": "2024",
+    "image": "c11.jpeg",
+    "description": "Optional description of the certificate"
+  },
+  {
+    "id": 2,
+    "title": "Another Certificate",
+    "issuer": "Another Organization",
+    "date": "2023",
+    "image": "c12.jpeg",
+    "description": "Add details about this certification"
+  }
+]

@@ -1,0 +1,113 @@
+.projects-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    flex: 1;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Alternating Layout */
+.project-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-card.reverse .project-content {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.project-card.reverse .project-links {
+    justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+
+    .project-card,
+    .project-card.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .project-content,
+    .project-card.reverse .project-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .project-links,
+    .project-card.reverse .project-links {
+        justify-content: flex-start;
+    }
+}

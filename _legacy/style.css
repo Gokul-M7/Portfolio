@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0d1117;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #0d1117;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #c9d1d9;
+}
+
+nav ul li a:hover {
+    color: #58a6ff;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 60px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    color: #58a6ff;
+}
+
+.highlight {
+    color: #4f9cf9;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #4f9cf9;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* HERO IMAGE */
+.hero-img img {
+    width: 280px;
+    border-radius: 50%;
+    border: 4px solid #58a6ff;
+}
+
+/* SECTION TITLES */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 60px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* SKILLS */
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* PROJECTS */
+.projects {
+    padding: 80px 60px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    padding: 20px;
+    background: #161b22;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+.project-btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    color: #58a6ff;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 80px 60px;
+}
+/* CERTIFICATIONS & ACHIEVEMENTS */
+.certifications, .achievements {
+    padding: 80px 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cert-list, .ach-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c9d1d9;
+}
+
+.cert-list li::before,
+.ach-list li::before {
+    content: "✔ ";
+    color: #4f9cf9;
+    font-weight: bold;
+}

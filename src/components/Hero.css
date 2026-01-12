@@ -1,0 +1,198 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    /* Ensure spacing from next section */
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    /* Increased gap */
+    padding: 0 20px;
+}
+
+/* Left Side: Text */
+.hero-content {
+    flex: 1.2;
+    /* Give text slightly more space to push right */
+    text-align: left;
+    z-index: 5;
+    padding-left: 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.highlight {
+    color: var(--text-primary);
+    /* Keep black/dark */
+}
+
+.highlight-text {
+    background: linear-gradient(90deg, var(--primary-color), #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--glass-border);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+/* Right Side: Profile Image */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow-bg {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: var(--secondary-color);
+    /* Yellow */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.image-placeholder {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    z-index: 2;
+    background-image: url('https://via.placeholder.com/400');
+    /* Replace with actual user image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.image-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--primary-color), transparent);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    /* Increased breakpoint for earlier stacking */
+    .hero-container {
+        flex-direction: column;
+        /* Stack appropriately on smaller desktops */
+        gap: 4rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column;
+        /* Stack vertically */
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .yellow-bg {
+        width: 280px;
+        height: 280px;
+    }
+
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}

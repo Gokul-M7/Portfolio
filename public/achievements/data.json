@@ -1,0 +1,80 @@
+[
+{
+  "id": 1,
+  "title": "GCC-X-SHIFT HACKATHON ",
+  "description": "Won 1st Prize in Hiring in GCC's Challenge.",
+  "category": "Achievements",
+  "image": "achievement-1.jpg"
+  
+},
+  {
+    "id": 2,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Achievements",
+    "image": "achievement-2.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Achievements",
+    "image": "achievement-3.jpeg"
+  
+  },
+  {
+    "id": 4,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Achievements",
+    "image": "achievement-4.jpeg"
+  },
+   {
+    "id": 5,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Achievements",
+    "image": "achievement-5.jpeg"
+  },
+  {
+    "id": 1,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Activity",
+    "image": "Activity1.jpeg"
+    
+  },
+   {
+    "id": 2,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Activity",
+    "image": "Activity2.jpeg"
+    
+  },
+   {
+    "id": 3,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Activity",
+    "image": "Activity3.jpeg"
+    
+  },
+   {
+    "id": 4,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Activity",
+    "image": "Activity1.jpeg"
+    
+  },
+   {
+    "id": 5,
+    "title": "Another Achievement",
+    "description": "Details about this achievement or activity",
+    "category": "Activity",
+    "image": "Activity5.jpeg"
+    
+  }
+  
+]
