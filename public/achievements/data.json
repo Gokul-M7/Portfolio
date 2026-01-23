@@ -1,80 +1,72 @@
 [
 {
   "id": 1,
-  "title": "GCC-X-SHIFT HACKATHON ",
-  "description": "Won 1st Prize in Hiring in GCC's Challenge.",
+  "title": "GCC-X-SHIFT HACKATHON",
+  "description": "Secured 1st Prize in the GCC X-SHIFT Hackathon Hiring Challenge, organized by 6S Consulting PVT LTD. Demonstrated exceptional problem-solving and technical skills in a competitive environment.",
   "category": "Achievements",
   "image": "achievement-1.jpg"
-  
 },
-  {
-    "id": 2,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Achievements",
-    "image": "achievement-2.jpeg"
-  },
-  {
-    "id": 3,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Achievements",
-    "image": "achievement-3.jpeg"
-  
-  },
-  {
-    "id": 4,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Achievements",
-    "image": "achievement-4.jpeg"
-  },
-   {
-    "id": 5,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Achievements",
-    "image": "achievement-5.jpeg"
-  },
-  {
-    "id": 1,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Activity",
-    "image": "Activity1.jpeg"
-    
-  },
-   {
-    "id": 2,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Activity",
-    "image": "Activity2.jpeg"
-    
-  },
-   {
-    "id": 3,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Activity",
-    "image": "Activity3.jpeg"
-    
-  },
-   {
-    "id": 4,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Activity",
-    "image": "Activity1.jpeg"
-    
-  },
-   {
-    "id": 5,
-    "title": "Another Achievement",
-    "description": "Details about this achievement or activity",
-    "category": "Activity",
-    "image": "Activity5.jpeg"
-    
-  }
-  
+{
+  "id": 2,
+  "title": "Spectra-x Competition",
+  "description": "Achieved 2nd Prize in the Spectra-x Technical Competition organized by IEEE IES at KPRIET. Showcased expertise in innovation and technical implementation.",
+  "category": "Achievements",
+  "image": "achievement-2.jpeg"
+},
+{
+  "id": 3,
+  "title": "INNOVSENSE'25 Competition",
+  "description": "Secured 4th Position in the INNOVSENSE'25 Innovation Competition at KPRIET. Demonstrated creative problem-solving and project execution capabilities.",
+  "category": "Achievements",
+  "image": "achievement-3.jpeg"
+},
+{
+  "id": 4,
+  "title": "Inter Unit Competition - NSC 2024",
+  "description": "Earned Runner-Up position in the Service Subject Examination during NSC 2024 at 1(P) Naval Unit NCC. Demonstrated commitment to professional development and excellence.",
+  "category": "Achievements",
+  "image": "achievement-4.jpeg"
+},
+{
+  "id": 5,
+  "title": "Annual Training Camp 2024",
+  "description": "Achieved Runner-Up status in both Service Subject Examination and Overall Category at the Annual Training Camp 2024, 2TN Naval Unit NCC. Demonstrated leadership and consistent performance.",
+  "category": "Achievements",
+  "image": "achievement-5.jpeg"
+},
+{
+  "id": 1,
+  "title": "Professional Workshop Participation",
+  "description": "Active participation in industry-leading professional workshops and seminars. Continuously engaged in skill enhancement and staying updated with current industry trends and best practices.",
+  "category": "Activity",
+  "image": "Activity1.jpeg"
+},
+{
+  "id": 2,
+  "title": "Community Engagement Initiative",
+  "description": "Contributed to community development programs and professional networking events. Demonstrated commitment to knowledge sharing and collaborative learning within the tech community.",
+  "category": "Activity",
+  "image": "Activity2.jpeg"
+},
+{
+  "id": 3,
+  "title": "Technical Certification Program",
+  "description": "Successfully completed advanced technical certification programs to strengthen expertise in emerging technologies. Committed to continuous professional growth and skill development.",
+  "category": "Activity",
+  "image": "Activity3.jpeg"
+},
+{
+  "id": 4,
+  "title": "Volunteer Technical Mentor",
+  "description": "Served as a technical mentor, guiding junior developers and students in their professional journey. Contributed to knowledge transfer and mentorship within the technology sector.",
+  "category": "Activity",
+  "image": "Activity4.jpeg"
+},
+{
+  "id": 5,
+  "title": "Industry Conference Speaker",
+  "description": "Presented insights and expertise at professional conferences and technical meetups. Shared knowledge on emerging technologies and best practices with industry peers.",
+  "category": "Activity",
+  "image": "Activity5.jpeg"
+}
 ]

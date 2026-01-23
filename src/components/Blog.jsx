@@ -8,6 +8,8 @@ const Achievements = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [categories, setCategories] = useState(['All']);
+    const [showAll, setShowAll] = useState(false);
+    const ITEMS_PER_CATEGORY = 3;
 
     useEffect(() => {
         // Load achievements from public folder
@@ -41,6 +43,8 @@ const Achievements = () => {
         const matchesCategory = selectedCategory === 'All' || achievement.category === selectedCategory;
         return matchesSearch && matchesCategory;
     });
+
+    const displayedAchievements = showAll ? filteredAchievements : filteredAchievements.slice(0, ITEMS_PER_CATEGORY);
 
     const emptyState = (
         <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-secondary)' }}>
@@ -115,8 +119,8 @@ const Achievements = () => {
                                 layout
                                 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '30px' }}
                             >
-                                {filteredAchievements.length > 0 ? (
-                                    filteredAchievements.map((achievement, index) => (
+                                {displayedAchievements.length > 0 ? (
+                                    displayedAchievements.map((achievement, index) => (
                                         <motion.article
                                             key={achievement.id}
                                             layout
@@ -155,8 +159,7 @@ const Achievements = () => {
                                                 </div>
                                             </div>
                                             <div style={{ padding: '25px' }}>
-                                                <h3 style={{ marginBottom: '10px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                    <Trophy size={20} style={{ color: 'var(--primary-color)' }} />
+                                                <h3 style={{ marginBottom: '10px', color: 'var(--text-primary)' }}>
                                                     {achievement.title}
                                                 </h3>
                                                 <p style={{ color: 'var(--text-secondary)', marginBottom: '15px', lineHeight: '1.5', fontSize: '0.95rem' }}>
@@ -177,6 +180,25 @@ const Achievements = () => {
                                 )}
                             </motion.div>
                         </AnimatePresence>
+
+                        {/* See More Button */}
+                        {filteredAchievements.length > ITEMS_PER_CATEGORY && (
+                            <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                                <button
+                                    onClick={() => setShowAll(!showAll)}
+                                    className="btn btn-primary"
+                                    style={{
+                                        padding: '12px 32px',
+                                        borderRadius: '25px',
+                                        fontSize: '1rem',
+                                        fontWeight: '600',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    {showAll ? 'Show Less' : 'See More'}
+                                </button>
+                            </div>
+                        )}
                     </>
                 )}
 

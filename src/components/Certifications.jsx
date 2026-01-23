@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 const Certifications = () => {
     const [certifications, setCertifications] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [showAll, setShowAll] = useState(false);
+    const ITEMS_LIMIT = 3;
 
     useEffect(() => {
         const loadCertifications = async () => {
@@ -85,60 +87,81 @@ const Certifications = () => {
                         <p style={{ marginTop: '15px', color: 'var(--text-secondary)' }}>Loading certifications...</p>
                     </div>
                 ) : (
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '30px' }}
-                    >
-                        {certifications.length > 0 ? (
-                            certifications.map((cert, index) => (
-                                <motion.div
-                                    key={cert.id}
-                                    variants={itemVariants}
-                                    className="glass"
-                                    style={{
-                                        borderRadius: '15px',
-                                        overflow: 'hidden',
-                                        transition: 'all 0.3s ease'
-                                    }}
-                                    whileHover={{ transform: 'translateY(-10px)' }}
-                                >
-                                    {/* Certificate Image */}
-                                    <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
-                                        <img
-                                            src={`/certificates/${cert.image}`}
-                                            alt={cert.title}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                    
-                                    {/* Certificate Info */}
-                                    <div style={{ padding: '25px' }}>
-                                        <h3 style={{ marginBottom: '8px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                            <Award size={20} style={{ color: 'var(--primary-color)' }} />
-                                            {cert.title}
-                                        </h3>
-                                        <p style={{ color: 'var(--primary-color)', fontWeight: '600', marginBottom: '8px' }}>
-                                            {cert.issuer}
-                                        </p>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '12px' }}>
-                                            📅 {cert.date}
-                                        </p>
-                                        {cert.description && (
-                                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.4', fontStyle: 'italic' }}>
-                                                {cert.description}
+                    <>
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '30px' }}
+                        >
+                            {certifications.length > 0 ? (
+                                (showAll ? certifications : certifications.slice(0, ITEMS_LIMIT)).map((cert, index) => (
+                                    <motion.div
+                                        key={cert.id}
+                                        variants={itemVariants}
+                                        className="glass"
+                                        style={{
+                                            borderRadius: '15px',
+                                            overflow: 'hidden',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        whileHover={{ transform: 'translateY(-10px)' }}
+                                    >
+                                        {/* Certificate Image */}
+                                        <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                                            <img
+                                                src={`/certificates/${cert.image}`}
+                                                alt={cert.title}
+                                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                        
+                                        {/* Certificate Info */}
+                                        <div style={{ padding: '25px' }}>
+                                            <h3 style={{ marginBottom: '8px', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                <Award size={20} style={{ color: 'var(--primary-color)' }} />
+                                                {cert.title}
+                                            </h3>
+                                            <p style={{ color: 'var(--primary-color)', fontWeight: '600', marginBottom: '8px' }}>
+                                                {cert.issuer}
                                             </p>
-                                        )}
-                                    </div>
-                                </motion.div>
-                            ))
-                        ) : (
-                            emptyState
+                                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '12px' }}>
+                                                📅 {cert.date}
+                                            </p>
+                                            {cert.description && (
+                                                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.4', fontStyle: 'italic' }}>
+                                                    {cert.description}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </motion.div>
+                                ))
+                            ) : (
+                                emptyState
+                            )}
+                        </motion.div>
+
+                        {/* See More Button */}
+                        {certifications.length > ITEMS_LIMIT && (
+                            <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                                <button
+                                    onClick={() => setShowAll(!showAll)}
+                                    className="btn btn-primary"
+                                    style={{
+                                        padding: '12px 32px',
+                                        borderRadius: '25px',
+                                        fontSize: '1rem',
+                                        fontWeight: '600',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    {showAll ? 'Show Less' : 'See More'}
+                                </button>
+                            </div>
                         )}
-                    </motion.div>
+                    </>
                 )}
             </div>
         </section>
