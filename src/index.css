@@ -27,25 +27,26 @@
 
 /* Dark Theme */
 [data-theme="dark"] {
-    --primary-color: #3b82f6;
-    /* Brighter Blue for dark mode */
-    --primary-hover: #2563eb;
-    --secondary-color: #fbbf24;
-    /* Lighter Yellow */
+    --primary-color: #8A2BE2;
+    /* Blue Violet */
+    --primary-hover: #9370DB;
+    /* Medium Purple */
+    --secondary-color: #00FF7F;
+    /* Spring Green */
 
-    --bg-primary: #0f172a;
-    /* Very Dark Blue */
-    --bg-secondary: #1e293b;
-    /* Dark Slate */
-    --bg-tertiary: #334155;
-    /* Medium Dark Slate */
+    --bg-primary: #1a1a2e;
+    /* Dark Blue-Purple */
+    --bg-secondary: #16213e;
+    /* Another Dark Blue Shade */
+    --bg-tertiary: #0f3460;
+    /* Darker Blue for depth */
 
-    --text-primary: #f1f5f9;
-    /* Very Light Gray */
-    --text-secondary: #cbd5e1;
-    /* Light Gray */
+    --text-primary: #E0E0E0;
+    /* Light Gray for main text */
+    --text-secondary: #A9A9A9;
+    /* Darker Gray for secondary text */
 
-    --glass-bg: rgba(30, 41, 59, 0.8);
+    --glass-bg: rgba(22, 33, 62, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
@@ -61,11 +62,12 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--bg-primary);
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     width: 100%;
+
 }
 
 /* Removed Blob Animations */
